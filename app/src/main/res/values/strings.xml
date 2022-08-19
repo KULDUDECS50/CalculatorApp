@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calculator App</string>
+    <string name="calc" />
+    <string name="enter_your_num">enter your num</string>
+    <string name="ac">AC</string>
+    <string name="sign">+/-</string>
+    <string name="percent">%</string>
+    <string name="divide">/</string>
+</resources>

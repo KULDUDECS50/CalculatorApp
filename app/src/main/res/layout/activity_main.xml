@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLayout"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:text="@string/ac"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:text="@string/sign"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:text="@string/percent"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:text="@string/divide"
+                android:textColor="@color/black"
+                app:backgroundTint="#FFF"
+                app:cornerRadius="36dp" />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/num1ET"-->
+<!--        android:layout_width="153dp"-->
+<!--        android:layout_height="54dp"-->
+
+<!--        android:hint="enter your num"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:text=""-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@android:color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.313" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/num2ET"-->
+<!--        android:layout_width="153dp"-->
+<!--        android:layout_height="54dp"-->
+
+<!--        android:hint="@string/enter_your_num"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:text=""-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@android:color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.422" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/findSum"-->
+<!--        android:layout_width="73dp"-->
+<!--        android:layout_height="59dp"-->
+<!--        android:background="@color/black"-->
+<!--        android:onClick="findSum"-->
+<!--        android:text="="-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.565"-->
+<!--        tools:ignore="UsingOnClickInXml" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/resultTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=""-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.707" />-->
+
+</RelativeLayout>
