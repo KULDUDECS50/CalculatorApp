@@ -5,53 +5,320 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="179dp"
+        android:layout_height="121dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="610dp"
+        android:background="@android:color/holo_red_dark" />
+
+
+    <EditText
+        android:id="@+id/num1ET"
+        android:layout_width="161dp"
+        android:layout_height="140dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="466dp"
+        android:layout_toStartOf="@+id/num2ET"
+        android:hint="enter your num"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313" />
+
+    <EditText
+        android:id="@+id/num2ET"
+        android:layout_width="145dp"
+        android:layout_height="127dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="464dp"
+        android:hint="enter your num"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423" />
+
     <LinearLayout
+
+        android:id="@+id/buttonLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonLayout"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/ac"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
+                android:layout_margin="5dp"
                 android:text="@string/ac"
                 android:textColor="@color/black"
                 app:backgroundTint="#f1f1f1"
                 app:cornerRadius="36dp" />
+
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/negopos"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
+                android:layout_margin="5dp"
                 android:text="@string/sign"
                 android:textColor="@color/black"
                 app:backgroundTint="#f1f1f1"
                 app:cornerRadius="36dp" />
+
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/percent"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
+                android:layout_margin="5dp"
                 android:text="@string/percent"
                 android:textColor="@color/black"
                 app:backgroundTint="#f1f1f1"
                 app:cornerRadius="36dp" />
+
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/divide"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
+                android:layout_margin="5dp"
                 android:text="@string/divide"
+                android:textColor="@color/black"
+                app:backgroundTint="#FFF"
+                app:cornerRadius="36dp"
+                android:onClick="findDiv"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/seven"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="7"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/eight"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="8"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/nine"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="9"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/multiply"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="X"
+                android:onClick="findProd"
                 android:textColor="@color/black"
                 app:backgroundTint="#FFF"
                 app:cornerRadius="36dp" />
 
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/four"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/five"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="5"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/six"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="6"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/minus"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="-"
+                android:textColor="@color/black"
+                app:backgroundTint="#FFF"
+                android:onClick="findDiff"
+                app:cornerRadius="36dp" />
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/one"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/two"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/three"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/plus"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="+"
+                android:textColor="@color/black"
+                app:backgroundTint="#FFF"
+                app:cornerRadius="36dp"
+                android:onClick="findSum"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/zero"
+                android:layout_width="143dp"
+                android:layout_height="72dp"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textColor="@color/black"
+                app:backgroundTint="#f1f1f1"
+                app:cornerRadius="36dp" />
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/point"-->
+<!--                android:layout_width="72dp"-->
+<!--                android:layout_height="72dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:text="."-->
+<!--                android:textColor="@color/black"-->
+<!--                app:backgroundTint="#f1f1f1"-->
+<!--                app:cornerRadius="36dp" />-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/equals"-->
+<!--                android:layout_width="72dp"-->
+<!--                android:layout_height="72dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:text="="-->
+<!--                android:textColor="@color/black"-->
+<!--                android:onClick="calculate"-->
+<!--                app:backgroundTint="#FFF"-->
+<!--                app:cornerRadius="36dp" />-->
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 
-<!--    <EditText-->
+    <!--    <EditText-->
 <!--        android:id="@+id/num1ET"-->
 <!--        android:layout_width="153dp"-->
 <!--        android:layout_height="54dp"-->
