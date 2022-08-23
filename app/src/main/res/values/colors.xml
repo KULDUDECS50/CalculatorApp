@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color  name="lightGreyCalc">#D4D4D2</color>
+    <color  name="darkGreyCalc">#505050</color>
+    <color  name="orangeCalc">#FF9500</color>
+    <color  name="chalkboard">#1C1C1C</color>
 </resources>

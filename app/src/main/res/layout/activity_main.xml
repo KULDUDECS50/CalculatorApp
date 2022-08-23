@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#1C1C1C">
+    android:background="@color/white">
+    <!--#1C1C1C-->
 
 
     <EditText
@@ -20,61 +21,84 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="612dp"
-        android:background="#505050" />
+        app:backgroundTint="@color/darkGreyCalc"
+        />
 
     <!--    android:layout_toStartOf="@+id/num2ET"-->
 
-<!--    <EditText-->
-<!--        android:id="@+id/num2ET"-->
-<!--        android:layout_width="145dp"-->
-<!--        android:layout_height="127dp"-->
-
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginTop="140dp"-->
-<!--        android:layout_marginEnd="83dp"-->
-<!--        android:layout_marginBottom="464dp"-->
-<!--        android:hint="enter your num"-->
-<!--        android:text=""-->
-<!--        android:textColor="@color/black"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.461"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.423" />-->
-
 
     <EditText
-        android:id="@+id/calculation"
-        android:layout_width="386dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/num1ET"
+        android:layout_width="145dp"
+        android:layout_height="127dp"
 
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginBottom="502dp"
-        android:background="#D4D4D2"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="231dp"
+        android:layout_marginBottom="459dp"
+        android:hint="enter your num"
         android:text=""
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintVertical_bias="0.423" />
+
+    <EditText
+        android:id="@+id/num2ET"
+        android:layout_width="145dp"
+        android:layout_height="127dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="461dp"
+        android:hint="enter your num"
+        android:text=""
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/calculation"-->
+<!--        android:layout_width="386dp"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginTop="123dp"-->
+<!--        android:layout_marginBottom="502dp"-->
+<!--        android:background="#D4D4D2"-->
+<!--        android:text=""-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.313" />-->
 
     <LinearLayout
 
         android:id="@+id/buttonLayout"
         android:layout_width="358dp"
         android:layout_height="423dp"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
 
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="285dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="17dp"
         android:orientation="vertical"
@@ -92,7 +116,7 @@
                 android:layout_margin="5dp"
                 android:text="@string/ac"
                 android:textColor="@color/black"
-                app:backgroundTint="#D4D4D2"
+                app:backgroundTint="@color/lightGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -102,7 +126,7 @@
                 android:layout_margin="5dp"
                 android:text="@string/sign"
                 android:textColor="@color/black"
-                app:backgroundTint="#D4D4D2"
+                app:backgroundTint="@color/lightGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -112,7 +136,7 @@
                 android:layout_margin="5dp"
                 android:text="@string/percent"
                 android:textColor="@color/black"
-                app:backgroundTint="#D4D4D2"
+                app:backgroundTint="@color/lightGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -151,7 +175,7 @@
                 android:layout_margin="5dp"
                 android:text="8"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -161,7 +185,7 @@
                 android:layout_margin="5dp"
                 android:text="9"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -172,7 +196,7 @@
                 android:onClick="findProd"
                 android:text="X"
                 android:textColor="@color/white"
-                app:backgroundTint="#FF9500"
+                app:backgroundTint="@color/orangeCalc"
                 app:cornerRadius="36dp" />
 
 
@@ -190,7 +214,7 @@
                 android:layout_margin="5dp"
                 android:text="4"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -200,7 +224,7 @@
                 android:layout_margin="5dp"
                 android:text="5"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -210,7 +234,7 @@
                 android:layout_margin="5dp"
                 android:text="6"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -221,7 +245,7 @@
                 android:onClick="findDiff"
                 android:text="-"
                 android:textColor="@color/white"
-                app:backgroundTint="#FF9500"
+                app:backgroundTint="@color/orangeCalc"
                 app:cornerRadius="36dp" />
 
 
@@ -239,7 +263,7 @@
                 android:layout_margin="5dp"
                 android:text="1"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -249,7 +273,7 @@
                 android:layout_margin="5dp"
                 android:text="2"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -259,7 +283,7 @@
                 android:layout_margin="5dp"
                 android:text="3"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -270,7 +294,7 @@
                 android:onClick="findSum"
                 android:text="+"
                 android:textColor="@color/white"
-                app:backgroundTint="#FF9500"
+                app:backgroundTint="@color/orangeCalc"
                 app:cornerRadius="36dp" />
 
 
@@ -288,7 +312,7 @@
                 android:layout_margin="5dp"
                 android:text="0"
                 android:textColor="@color/white"
-                app:backgroundTint="#505050"
+                app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -299,7 +323,7 @@
                 android:layout_marginLeft="12dp"
                 android:text="="
                 android:textColor="@color/white"
-                app:backgroundTint="#FF9500"
+                app:backgroundTint="@color/orangeCalc"
                 app:cornerRadius="36dp" />
 
             <!--            <com.google.android.material.button.MaterialButton-->
@@ -323,7 +347,7 @@
             <!--                app:backgroundTint="#FFF"-->
             <!--                app:cornerRadius="36dp" />-->
 
-
+            <!--https://developer.android.com/reference/com/google/android/material/button/MaterialButton -->
         </LinearLayout>
 
     </LinearLayout>
