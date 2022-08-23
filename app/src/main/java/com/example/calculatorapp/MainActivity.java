@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
         numberSumTV.setText("" + product);
     }
+    public void one(View view){
+        EditText field = (EditText)findViewById(R.id.one)
+    }
+
 
 
 }
