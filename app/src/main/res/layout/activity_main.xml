@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/white">
-    <!--#1C1C1C-->
+    android:background="@color/chalkboard">
 
 
     <EditText
@@ -21,52 +20,54 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="612dp"
-        android:background="#505050" />
+        android:background="#505050"
+
+        />
 
     <!--    android:layout_toStartOf="@+id/num2ET"-->
 
 
-    <EditText
-        android:id="@+id/num1ET"
-        android:layout_width="150dp"
-        android:layout_height="143dp"
+<!--    <EditText-->
+<!--        android:id="@+id/num1ET"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="143dp"-->
 
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="145dp"
-        android:layout_marginEnd="226dp"
-        android:layout_marginBottom="497dp"
-        android:hint="enter your num"
-        android:text=""
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginTop="145dp"-->
+<!--        android:layout_marginEnd="226dp"-->
+<!--        android:layout_marginBottom="497dp"-->
+<!--        android:hint="enter your num"-->
+<!--        android:text=""-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.461"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.423" />-->
 
-    <EditText
-        android:id="@+id/num2ET"
-        android:layout_width="175dp"
-        android:layout_height="139dp"
+<!--    <EditText-->
+<!--        android:id="@+id/num2ET"-->
+<!--        android:layout_width="175dp"-->
+<!--        android:layout_height="139dp"-->
 
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="143dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="503dp"
-        android:hint="enter your num"
-        android:text=""
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginTop="143dp"-->
+<!--        android:layout_marginEnd="41dp"-->
+<!--        android:layout_marginBottom="503dp"-->
+<!--        android:hint="enter your num"-->
+<!--        android:text=""-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.461"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.423" />-->
 
     <EditText
         android:id="@+id/calculation"
@@ -77,9 +78,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="179dp"
-        android:layout_marginBottom="490dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginBottom="526dp"
         android:background="#D4D4D2"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,16 +92,16 @@
     <LinearLayout
 
         android:id="@+id/buttonLayout"
-        android:layout_width="358dp"
-        android:layout_height="423dp"
+        android:layout_width="360dp"
+        android:layout_height="466dp"
         android:layout_alignParentTop="true"
 
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="307dp"
+        android:layout_marginTop="224dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="-5dp"
+        android:layout_marginBottom="41dp"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -116,6 +117,7 @@
                 android:layout_margin="5dp"
                 android:text="@string/ac"
                 android:textColor="@color/black"
+                android:onClick="clear"
                 app:backgroundTint="@color/lightGreyCalc"
                 app:cornerRadius="36dp" />
 
@@ -126,6 +128,7 @@
                 android:layout_margin="5dp"
                 android:text="@string/sign"
                 android:textColor="@color/black"
+                android:onClick="clear"
                 app:backgroundTint="@color/lightGreyCalc"
                 app:cornerRadius="36dp" />
 
@@ -136,6 +139,7 @@
                 android:layout_margin="5dp"
                 android:text="@string/percent"
                 android:textColor="@color/black"
+                android:onClick="clear"
                 app:backgroundTint="@color/lightGreyCalc"
                 app:cornerRadius="36dp" />
 
@@ -164,6 +168,7 @@
                 android:layout_height="72dp"
                 android:layout_margin="5dp"
                 android:text="7"
+                android:onClick="seven"
                 android:textColor="@color/white"
                 app:backgroundTint="#505050"
                 app:cornerRadius="36dp" />
@@ -175,6 +180,7 @@
                 android:layout_margin="5dp"
                 android:text="8"
                 android:textColor="@color/white"
+                android:onClick="eight"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
@@ -184,6 +190,7 @@
                 android:layout_height="72dp"
                 android:layout_margin="5dp"
                 android:text="9"
+                android:onClick="nine"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
@@ -214,6 +221,7 @@
                 android:layout_margin="5dp"
                 android:text="4"
                 android:textColor="@color/white"
+                android:onClick="four"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
@@ -223,6 +231,7 @@
                 android:layout_height="72dp"
                 android:layout_margin="5dp"
                 android:text="5"
+                android:onClick="five"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
@@ -233,6 +242,7 @@
                 android:layout_height="72dp"
                 android:layout_margin="5dp"
                 android:text="6"
+                android:onClick="six"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
@@ -262,6 +272,7 @@
                 android:layout_height="72dp"
                 android:layout_margin="5dp"
                 android:text="1"
+                android:onClick="one"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
@@ -273,6 +284,7 @@
                 android:layout_margin="5dp"
                 android:text="2"
                 android:textColor="@color/white"
+                android:onClick="two"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
 
@@ -282,6 +294,7 @@
                 android:layout_height="72dp"
                 android:layout_margin="5dp"
                 android:text="3"
+                android:onClick="three"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
@@ -322,6 +335,7 @@
                 android:layout_margin="5dp"
                 android:layout_marginLeft="12dp"
                 android:text="="
+                android:onClick="calc"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/orangeCalc"
                 app:cornerRadius="36dp" />
