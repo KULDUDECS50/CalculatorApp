@@ -5,43 +5,56 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.browse.MediaBrowser;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private String sign;
     private Double numET1, numET2;
+    private double output;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        //this makes sure that the keyboard doesnt pop up
+        //https://stackoverflow.com/questions/2496901/android-on-screen-keyboard-auto-popping-up
+
     }
 
     public void calc(View view) {
-        EditText field = findViewById(R.id.calculation);
-        double output = 0;
-        EditText screen = findViewById(R.id.resultTV);
-        numET2 = Double.parseDouble((field.getText().toString()));
-        if(sign == "+"){
-            output = numET1+numET2;
-            sign="";
-        }
-        else if(sign == "-"){
-            output = numET1-numET2;
-            sign="";
-        }
-        else if(sign == "/"){
-            output = numET1/numET2;
-            sign="";
-        }
-        else if(sign == "*"){
-            output = numET1*numET2;
-            sign="";
-        }
-        screen.setText("" + output);
+        EditText numberSumTV = findViewById(R.id.calculation);
 
-    }
+
+        numET2 = Double.parseDouble((numberSumTV.getText().toString()));
+        if(!numberSumTV.getText().equals("")) {
+            if (sign.equals("+")) {
+                output = numET1 + numET2;
+                sign = "";
+            } else if (sign.equals("-")) {
+                output = numET1 - numET2;
+                sign = "";
+            } else if (sign.equals("/")) {
+                output = numET1 / numET2;
+                sign = "";
+            } else if (sign.equals("*")) {
+                output = numET1 * numET2;
+                sign = "";
+            }else if (sign.equals("%")) {
+                numET1 = output;
+                output = numET1 * 0.01;
+                sign = "";
+            }
+
+
+        }
+        numberSumTV.setText("" + output);
+
+        }
+
 
     public void findSum(View view) {
 //        EditText number1ET = findViewById(R.id.num1ET);
@@ -63,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             numET1 = Double.parseDouble((numberSumTV.getText().toString()));
         }
         else{
-            numET1  =0.0;
+            numET1  = 0.0;
         }
         sign ="-";
 
@@ -93,9 +106,22 @@ public class MainActivity extends AppCompatActivity {
 
         numberSumTV.setText("");
     }
+    public void findPercent(View view) {
+        EditText numberSumTV = (EditText)findViewById(R.id.calculation);
+        if(!numberSumTV.getText().equals("")) {
+            numET1 = Double.parseDouble((numberSumTV.getText().toString()));
+        }
+        else{
+            numET1  =0.0;
+        }
+        sign ="%";
+
+//        numberSumTV.setText("");
+    }
 
     public void one(View view){
         EditText field = (EditText)findViewById(R.id.calculation);
+        field.setText(field.getText() + "1");
 
 
     }
@@ -139,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         EditText field = (EditText)findViewById(R.id.calculation);
         field.setText("");
     }
+
 
 
 
