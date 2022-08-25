@@ -2,12 +2,15 @@ package com.example.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.media.browse.MediaBrowser;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
     private String sign;
@@ -31,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         numET2 = Double.parseDouble((numberSumTV.getText().toString()));
+        //takes in second number
         if(!numberSumTV.getText().toString().equals("")) {
+            // each does the computational stuff
             if (sign.equals("+")) {
                 output = numET1 + numET2;
                 sign = "";
@@ -95,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             numET1 = Double.parseDouble(String.valueOf(numberSumTV.getText()));
         }
 
+
         sign ="*";
 
         numberSumTV.setText("");
@@ -112,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
 
         numberSumTV.setText(""+ output);
     }
-
+    //found out how to enter button text
+    // Courtesy of Jaden in my P6 class
     public void one(View view){
         EditText field = (EditText)findViewById(R.id.calculation);
         field.setText(field.getText() + "1");
@@ -158,6 +165,10 @@ public class MainActivity extends AppCompatActivity {
     public void clear(View view){
         EditText field = (EditText)findViewById(R.id.calculation);
         field.setText("");
+    }
+    public void dot(View view){
+        EditText field = (EditText)findViewById(R.id.calculation);
+        field.setText(field.getText() + ".");
     }
 
 
