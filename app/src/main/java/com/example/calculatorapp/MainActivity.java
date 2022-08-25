@@ -25,12 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void calc(View view) {
         EditText numberSumTV = findViewById(R.id.calculation);
 
 
         numET2 = Double.parseDouble((numberSumTV.getText().toString()));
-        if(!numberSumTV.getText().equals("")) {
+        if(!numberSumTV.getText().toString().equals("")) {
             if (sign.equals("+")) {
                 output = numET1 + numET2;
                 sign = "";
@@ -60,12 +61,10 @@ public class MainActivity extends AppCompatActivity {
 //        EditText number1ET = findViewById(R.id.num1ET);
 //        EditText number2ET = findViewById(R.id.num2ET);
         EditText numberSumTV = (EditText)findViewById(R.id.calculation);
-        if(!numberSumTV.getText().equals("")) {
+        if(!numberSumTV.getText().toString().equals("")) {
             numET1 = Double.parseDouble((numberSumTV.getText().toString()));
         }
-        else{
-            numET1  =0.0;
-        }
+
         sign ="+";
 
         numberSumTV.setText("");
@@ -75,48 +74,43 @@ public class MainActivity extends AppCompatActivity {
         if(!numberSumTV.getText().equals("")) {
             numET1 = Double.parseDouble((numberSumTV.getText().toString()));
         }
-        else{
-            numET1  = 0.0;
-        }
+
         sign ="-";
 
         numberSumTV.setText("");
     }
     public void findDiv(View view) {
         EditText numberSumTV = (EditText)findViewById(R.id.calculation);
-        if(!numberSumTV.getText().equals("")) {
+        if(!numberSumTV.getText().toString().equals("")) {
             numET1 = Double.parseDouble((numberSumTV.getText().toString()));
         }
-        else{
-            numET1  =0.0;
-        }
+
         sign ="/";
 
         numberSumTV.setText("");
     }
     public void findProd(View view) {
         EditText numberSumTV = (EditText)findViewById(R.id.calculation);
-        if(!numberSumTV.getText().equals("")) {
-            numET1 = Double.parseDouble((numberSumTV.getText().toString()));
+        if(!numberSumTV.getText().toString().equals("")) {
+            numET1 = Double.parseDouble(String.valueOf(numberSumTV.getText()));
         }
-        else{
-            numET1  =0.0;
-        }
+
         sign ="*";
 
         numberSumTV.setText("");
     }
     public void findPercent(View view) {
         EditText numberSumTV = (EditText)findViewById(R.id.calculation);
-        if(!numberSumTV.getText().equals("")) {
+        if(!numberSumTV.getText().toString().equals("")) {
             numET1 = Double.parseDouble((numberSumTV.getText().toString()));
         }
         else{
-            numET1  =0.0;
+            numET1  = 0.0;
         }
-        sign ="%";
+        output = numET1 * 0.01;
+        sign = "";
 
-//        numberSumTV.setText("");
+        numberSumTV.setText(""+ output);
     }
 
     public void one(View view){

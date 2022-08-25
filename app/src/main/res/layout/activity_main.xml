@@ -6,52 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/chalkboard">
-
-
-    <!--    android:layout_toStartOf="@+id/num2ET"-->
-
-
-<!--    <EditText-->
-<!--        android:id="@+id/num1ET"-->
-<!--        android:layout_width="150dp"-->
-<!--        android:layout_height="143dp"-->
-
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginTop="145dp"-->
-<!--        android:layout_marginEnd="226dp"-->
-<!--        android:layout_marginBottom="497dp"-->
-<!--        android:hint="enter your num"-->
-<!--        android:text=""-->
-<!--        android:textColor="@color/black"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.461"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.423" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/num2ET"-->
-<!--        android:layout_width="175dp"-->
-<!--        android:layout_height="139dp"-->
-
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginTop="143dp"-->
-<!--        android:layout_marginEnd="41dp"-->
-<!--        android:layout_marginBottom="503dp"-->
-<!--        android:hint="enter your num"-->
-<!--        android:text=""-->
-<!--        android:textColor="@color/black"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.461"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.423" />-->
+    <!--https://www.tutorialspoint.com/android/android_relative_layout.htm -->
+    <!--I learned about the relative layouts from this source.
+    The RL allows me to create individual parents
+      inside the giant parent so they could be more organized and grouped together.-->
 
 
     <EditText
@@ -66,10 +24,11 @@
         android:layout_marginStart="33dp"
         android:layout_marginTop="41dp"
         android:layout_marginBottom="544dp"
-        android:textSize="50sp"
         android:background="@color/chalkboard"
+        android:inputType="number"
         android:text=""
         android:textColor="@color/white"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,8 +38,8 @@
     <LinearLayout
 
         android:id="@+id/buttonLayout"
-        android:layout_width="361dp"
-        android:layout_height="485dp"
+        android:layout_width="359dp"
+        android:layout_height="471dp"
         android:layout_alignParentTop="true"
 
         android:layout_alignParentBottom="true"
@@ -88,7 +47,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="195dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="65dp"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -316,95 +275,22 @@
                 android:textColor="@color/white"
                 app:backgroundTint="@color/orangeCalc"
                 app:cornerRadius="36dp" />
-
-            <!--            <com.google.android.material.button.MaterialButton-->
-            <!--                android:id="@+id/point"-->
-            <!--                android:layout_width="72dp"-->
-            <!--                android:layout_height="72dp"-->
-            <!--                android:layout_margin="5dp"-->
-            <!--                android:text="."-->
-            <!--                android:textColor="@color/black"-->
-            <!--                app:backgroundTint="#f1f1f1"-->
-            <!--                app:cornerRadius="36dp" />-->
-
-            <!--            <com.google.android.material.button.MaterialButton-->
-            <!--                android:id="@+id/equals"-->
-            <!--                android:layout_width="72dp"-->
-            <!--                android:layout_height="72dp"-->
-            <!--                android:layout_margin="5dp"-->
-            <!--                android:text="="-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:onClick="calculate"-->
-            <!--                app:backgroundTint="#FFF"-->
-            <!--                app:cornerRadius="36dp" />-->
-
-            <!--https://developer.android.com/reference/com/google/android/material/button/MaterialButton -->
+            <!-- this is where i learned about material buttons and their really malleable properties.
+<!-https://developer.android.com/reference/com/google/android/material/button/MaterialButton -->
         </LinearLayout>
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="686dp"
+        android:layout_marginBottom="26dp"
+        android:text="@string/author"
+        android:textColor="@color/white" />
 
-    <!--    <EditText-->
-<!--        android:id="@+id/num1ET"-->
-<!--        android:layout_width="153dp"-->
-<!--        android:layout_height="54dp"-->
-
-<!--        android:hint="enter your num"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:text=""-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textColorHint="@android:color/white"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.313" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/num2ET"-->
-<!--        android:layout_width="153dp"-->
-<!--        android:layout_height="54dp"-->
-
-<!--        android:hint="@string/enter_your_num"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:text=""-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textColorHint="@android:color/white"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.422" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/findSum"-->
-<!--        android:layout_width="73dp"-->
-<!--        android:layout_height="59dp"-->
-<!--        android:background="@color/black"-->
-<!--        android:onClick="findSum"-->
-<!--        android:text="="-->
-<!--        android:textColor="@color/white"-->
-
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.498"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.565"-->
-<!--        tools:ignore="UsingOnClickInXml" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/resultTV"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text=""-->
-<!--        android:textColor="@color/black"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.498"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.707" />-->
 
 </RelativeLayout>
