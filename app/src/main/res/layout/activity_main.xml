@@ -38,8 +38,8 @@
     <LinearLayout
 
         android:id="@+id/buttonLayout"
-        android:layout_width="359dp"
-        android:layout_height="471dp"
+        android:layout_width="349dp"
+        android:layout_height="534dp"
         android:layout_alignParentTop="true"
 
         android:layout_alignParentBottom="true"
@@ -47,7 +47,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="195dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="100dp"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -263,22 +263,11 @@
                 android:textColor="@color/white"
                 app:backgroundTint="@color/darkGreyCalc"
                 app:cornerRadius="36dp" />
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/dot"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="5dp"
-                left
-                android:onClick="dot"
-                android:text="."
-                android:textColor="@color/white"
-                app:backgroundTint="@color/darkGreyCalc"
-                app:cornerRadius="36dp" />
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/calc"
-                android:layout_width="72dp"
+                android:layout_width="154dp"
                 android:layout_height="72dp"
                 android:layout_margin="5dp"
                 android:layout_marginLeft="12dp"
@@ -294,16 +283,16 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="142dp"
-        android:layout_height="33dp"
+        android:layout_width="151dp"
+        android:layout_height="47dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="652dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="749dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="33dp"
         android:text="@string/author"
         android:textColor="@color/white" />
 

@@ -166,10 +166,7 @@ public class MainActivity extends AppCompatActivity {
         EditText field = (EditText)findViewById(R.id.calculation);
         field.setText("");
     }
-    public void dot(View view){
-        EditText field = (EditText)findViewById(R.id.calculation);
-        field.setText(field.getText() + ".");
-    }
+
 
 
 
